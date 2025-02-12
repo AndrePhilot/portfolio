@@ -1,169 +1,152 @@
-// gitprofile.config.ts
+// gitprofile.config.js
 
-const CONFIG = {
+const config = {
   github: {
-    username: 'arifszn', // Your GitHub org/user name. (This is the only required config)
-  },
-  /**
-   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
-   * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
-   * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
-   */
-  base: '/gitprofile/',
-  projects: {
-    github: {
-      display: true, // Display GitHub projects?
-      header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
-      automatic: {
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-        limit: 8, // How many projects to display.
-        exclude: {
-          forks: false, // Forked projects will not be displayed if set to true.
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
-        },
-      },
-      manual: {
-        // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
-      },
+    username: 'AndrePhilot', // Your GitHub org/user name. (Required)
+    sortBy: 'stars', // stars | updated
+    limit: 4, // How many projects to display.
+    exclude: {
+      forks: true, // Forked projects will not be displayed if set to true.
+      projects: ['Redux_Mood', 'js-quirks', 'Frequency_Counters_and_Multiple_Pointers', 'Sorting_Exercise', 'Graph_Exercises', 'BST_Exercises', 'Ant-frontend', 'Ant-backend', 'lab-javascript-koans', 'CheeZJokes', 'dogfinder', 'color-factory', 'VendingMachine', 'Custom_Hooks', 'Trees_Exercise', 'React_Effects', 'Forms_Exercise', 'Lights_Out', 'React_Testing_Exercise', 'EightBall', 'react-jsx-intro', 'Jobly', 'Twitter-Clone', 'Connect-Four-Refactoring', 'Car-OO-Project', 'Memory-Game', 'Predictive-Text-Project', 'TODO-App', 'Fruit_Search', 'Memory_Game', 'GIF_Searcher', 'Jeopardy', 'AP_Macro_Graphing_Tool', 'Hacker_Or_Snooze', 'AP_Macro_Graphing_Tool', 'MacroeconMastery'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
     },
-    external: {
-      header: 'My Projects',
-      // To hide the `External Projects` section, keep it empty.
-      projects: [
-        {
-          title: 'Project Name',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
-        },
-        {
-          title: 'Project Name',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
-        },
-      ],
-    },
-  },
-  seo: {
-    title: 'Portfolio of Ariful Alam',
-    description: '',
-    imageURL: '',
   },
   social: {
-    linkedin: 'ariful-alam',
-    x: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
-    researchGate: '',
+    linkedin: 'andre-philot',
+    twitter: '',
+    mastodon: '',
     facebook: '',
     instagram: '',
-    reddit: '',
-    threads: '',
     youtube: '', // example: 'pewdiepie'
-    udemy: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
+    medium: '',
+    dev: '',
     stackoverflow: '', // example: '1/jeff-atwood'
-    skype: '',
+    skype: 'andre.philot',
     telegram: '',
-    website: 'https://www.arifszn.com',
+    website: '',
     phone: '',
-    email: 'arifulalamszn@gmail.com',
+    email: 'andrephilot@gmail.com',
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://docs.google.com/document/d/1xgYHjdsN7lK9d4RyZkpEJl8srNlpYFPwWxu8dz2g9Cw/edit?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
     'JavaScript',
-    'React.js',
+    'Python',
+    'TypeScript',
+    'AWS',
+    'SQL',
+    'Postgres',
+    'OOP',
+    'React',
+    'Redux',
     'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
+    'Express',
+    'Flask',
+    'BigQuery',
     'Git',
-    'Docker',
-    'PHPUnit',
+    'Jest',
+    'Jasmine',
+    'unittest',
+    'HTML',
     'CSS',
-    'Antd',
-    'Tailwind',
+    'REST',
+    'Gunicorn',
+    'Spline',
+    'Bootstrap'
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'MacroeconMastery',
+      position: 'Software Engineer',
+      from: 'May 2024',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://www.macroeconmastery.com/',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'Springboard Bootcamp',
+      position: 'Software Engineer',
+      from: 'August 2023',
+      to: 'July 2024',
+      companyLink: 'https://www.springboard.com/courses/software-engineering-career-track/',
     },
+    {
+      company: 'International Schools in Brazil, Egypt, Italy, Myanmar and Guatemala',
+      position: 'High School Humanities Teacher',
+      from: '2010',
+      to: 'Present',
+    }
   ],
-  certifications: [
+  /* certifications: [
     {
       name: 'Lorem ipsum',
       body: 'Lorem ipsum dolor sit amet',
       year: 'March 2022',
-      link: 'https://example.com',
+      link: 'https://example.com'
+    },
+  ], */
+  education: [
+    {
+      institution: 'Springboard Bootcamp',
+      degree: 'Software Engineering Certification',
+      from: '2023',
+      to: '2024',
+    },
+    {
+      institution: 'Metropolitan University',
+      degree: 'Graduate in Economics',
+      from: '2022',
+      to: '2023',
+    },
+    {
+      institution: 'Rio State University',
+      degree: 'MA in Modern and Contemporary Philosophy',
+      from: '2013',
+      to: '2015',
     },
   ],
-  educations: [
+
+  // To hide the `My Projects` section, keep it empty.
+  externalProjects: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
-    },
-    {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
-    },
-  ],
-  publications: [
-    {
-      title: 'Publication Title',
-      conferenceName: '',
-      journalName: 'Journal Name',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
+      title: 'MacroeconMastery',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      "Technologies: BigQuery, Node.js, Python, Flask, AWS, JavaScript, HTML and CSS. MacroeconMastery redefines AP Macroeconomics preparation with a cutting-edge full-stack application that stands out as the sole provider of immersive free-response practice. Our platform utilizes advanced natural language understanding powered by Dialogflow API, enabling seamless interaction through our intuitive chatbot interface. Our database is powered by BigQuery, a Google Cloud Service. We also sell products for students and teachers by linking our page to the Stripe API. The application is hosted at a AWS Elastic Beanstalk server and a CI/CD AWS CodePipeline connected with GitHub.",
+      imageUrl: 'https://i.ibb.co/SvbbF6d/Screenshot-2024-02-22-at-10-43-11-AM.png',
+      link: 'https://macroeconmastery.com/',
     },
     {
-      title: 'Publication Title',
-      conferenceName: 'Conference Name',
-      journalName: '',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
+      title: 'Nutjobs',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      "Technologies: React, Node.js, Express, PostgreSQL, JavaScript, JWT, JSON Schemas, OOP, Google Cloud Service, RESTful API, Bootstrap, Spline and Jest. Nutjobs is a full-stack job search platform offering intuitive filtering by title and salary. Secured with JSON Web Tokens (JWT) and JSON schemas for data integrity, Nutjobs ensures user privacy. Built with OOP principles for seamless CRUD operations, it's rigorously tested with Jest. The backend, a RESTful API on Express.js, connects to PostgreSQL on an Google Cloud Enterprise database for scalability. Frontend, powered by React. Nutjobs makes fun of the job hunting process, delivering a streamlined experience with advanced technology.",
+      imageUrl: 'https://www.stockvault.net/data/2018/07/15/253106/preview16.jpg',
+      link: 'https://nutjobs.onrender.com/',
+    },
+    {
+      title: 'Hack or Snooze',
+      description:
+        'Technologies: JavaScript ES6, AJAX (axios), HTML5, CSS3. In this forum-like application inspired by the HackerNews website, users are encouraged to share technology articles that they find interesting. Users have the ability to create a personalized account by setting up a username and can log in or log out as needed. They can also add or remove stories from the forum feed, giving them control over the content they see. Additionally, users can manage their favorite stories by adding or deleting them. There`s also a dedicated section where users can easily view all the stories they have created. The project is built with JavaScript ES6 and incorporates AJAX requests to the Hacker News API via axios. It features responsive design and follows a separation of concerns architecture.',
+      imageUrl: 'https://i.ytimg.com/vi/S-ulm49hvmk/maxresdefault.jpg',
+      link: 'https://andrephilot.github.io/Hacker_Or_Snooze/',
+    },
+    {
+      title: 'Jeopardy! Game',
+      description:
+        'Technologies: JavaScript, jQuery, AJAX, CSS and HTML to create a dynamic Jeopardy game. Implemented a 6x5 game board with randomly selected categories and questions from the jService API. Enabled users to reveal questions and answers with click interactions, replicating the Jeopardy TV show format and design. Integrated a ”Restart” button to fetch new categories and questions, enhancing replayability. Dynamically updated the game board with question texts, providing an interactive and engaging user experience. Demonstrated proficiency in handling asynchronous requests with AJAX for seamless data retrieval from the jService API.',
+      imageUrl: 'https://media0.giphy.com/media/1vZaAcldbX8Xh6lMlV/giphy.gif',
+      link: 'https://andrephilot.github.io/Jeopardy/',
     },
   ],
-  // Display articles from your medium or dev account. (Optional)
+  // Display blog posts from your medium or dev account. (Optional)
   blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
-    limit: 2, // How many articles to display. Max is 10.
+    // source: 'dev', // medium | dev
+    // username: 'arifszn', // to hide blog section, keep it empty
+    // limit: 2, // How many posts to display. Max is 10.
   },
   googleAnalytics: {
-    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
+    id: 'G-GREBQHGJZF', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
   },
   // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: {
@@ -171,7 +154,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'lofi',
+    defaultTheme: 'procyon',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -181,8 +164,8 @@ const CONFIG = {
     // using user system preferences, instead of the hardcoded defaultTheme
     respectPrefersColorScheme: false,
 
-    // Display the ring in Profile picture
-    displayAvatarRing: true,
+    // Hide the ring in Profile picture
+    hideAvatarRing: false,
 
     // Available themes. To remove any theme, exclude from here.
     themes: [
@@ -215,19 +198,16 @@ const CONFIG = {
       'night',
       'coffee',
       'winter',
-      'dim',
-      'nord',
-      'sunset',
       'procyon',
     ],
 
-    // Custom theme, applied to `procyon` theme
+    // Custom theme
     customTheme: {
-      primary: '#fc055b',
-      secondary: '#219aaf',
-      accent: '#e8d03a',
-      neutral: '#2A2730',
-      'base-100': '#E3E3ED',
+      primary: '#df3225',
+      secondary: '#df3225',
+      accent: '#fff200',
+      neutral: '#d4c4a4',
+      'base-100': '#1b2b3b',
       '--rounded-box': '3rem',
       '--rounded-btn': '3rem',
     },
@@ -239,8 +219,6 @@ const CONFIG = {
       target="_blank"
       rel="noreferrer"
     >GitProfile</a> and ❤️`,
-
-  enablePWA: true,
 };
 
-export default CONFIG;
+export default config;
