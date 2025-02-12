@@ -17,7 +17,7 @@ const CONFIG = {
       mode: 'automatic', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-        limit: 4, // How many projects to display.
+        limit: 0, // How many projects to display.
         exclude: {
           forks: true, // Forked projects will not be displayed if set to true.
           projects: ['Redux_Mood', 'js-quirks', 'Frequency_Counters_and_Multiple_Pointers', 'Sorting_Exercise', 'Graph_Exercises', 'BST_Exercises', 'Ant-frontend', 'Ant-backend', 'lab-javascript-koans', 'CheeZJokes', 'dogfinder', 'color-factory', 'VendingMachine', 'Custom_Hooks', 'Trees_Exercise', 'React_Effects', 'Forms_Exercise', 'Lights_Out', 'React_Testing_Exercise', 'EightBall', 'react-jsx-intro', 'Jobly', 'Twitter-Clone', 'Connect-Four-Refactoring', 'Car-OO-Project', 'Memory-Game', 'Predictive-Text-Project', 'TODO-App', 'Fruit_Search', 'Memory_Game', 'GIF_Searcher', 'Jeopardy', 'AP_Macro_Graphing_Tool', 'Hacker_Or_Snooze', 'AP_Macro_Graphing_Tool', 'MacroeconMastery'], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
@@ -92,7 +92,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      'https://docs.google.com/document/d/1xgYHjdsN7lK9d4RyZkpEJl8srNlpYFPwWxu8dz2g9Cw/edit?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
+      'https://docs.google.com/document/d/13zOIHqeMFFpmRF4s_43E4vy-vSmOpRLp/edit?usp=sharing&ouid=106603674230542707434&rtpof=true&sd=true', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'JavaScript',
