@@ -1,22 +1,84 @@
-// gitprofile.config.js
+// gitprofile.config.ts
 
-const config = {
+const CONFIG = {
   github: {
-    username: 'AndrePhilot', // Your GitHub org/user name. (Required)
-    sortBy: 'stars', // stars | updated
-    limit: 4, // How many projects to display.
-    exclude: {
-      forks: true, // Forked projects will not be displayed if set to true.
-      projects: ['Redux_Mood', 'js-quirks', 'Frequency_Counters_and_Multiple_Pointers', 'Sorting_Exercise', 'Graph_Exercises', 'BST_Exercises', 'Ant-frontend', 'Ant-backend', 'lab-javascript-koans', 'CheeZJokes', 'dogfinder', 'color-factory', 'VendingMachine', 'Custom_Hooks', 'Trees_Exercise', 'React_Effects', 'Forms_Exercise', 'Lights_Out', 'React_Testing_Exercise', 'EightBall', 'react-jsx-intro', 'Jobly', 'Twitter-Clone', 'Connect-Four-Refactoring', 'Car-OO-Project', 'Memory-Game', 'Predictive-Text-Project', 'TODO-App', 'Fruit_Search', 'Memory_Game', 'GIF_Searcher', 'Jeopardy', 'AP_Macro_Graphing_Tool', 'Hacker_Or_Snooze', 'AP_Macro_Graphing_Tool', 'MacroeconMastery'], // These projects will not be displayed. example: ['my-project1', 'my-project2']
+    username: 'AndrePhilot', // Your GitHub org/user name. (This is the only required config)
+  },
+  /**
+   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
+   * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
+   * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
+   */
+  base: '/portfolio/',
+  projects: {
+    github: {
+      display: true, // Display GitHub projects?
+      header: 'Github Projects',
+      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      automatic: {
+        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
+        limit: 4, // How many projects to display.
+        exclude: {
+          forks: true, // Forked projects will not be displayed if set to true.
+          projects: ['Redux_Mood', 'js-quirks', 'Frequency_Counters_and_Multiple_Pointers', 'Sorting_Exercise', 'Graph_Exercises', 'BST_Exercises', 'Ant-frontend', 'Ant-backend', 'lab-javascript-koans', 'CheeZJokes', 'dogfinder', 'color-factory', 'VendingMachine', 'Custom_Hooks', 'Trees_Exercise', 'React_Effects', 'Forms_Exercise', 'Lights_Out', 'React_Testing_Exercise', 'EightBall', 'react-jsx-intro', 'Jobly', 'Twitter-Clone', 'Connect-Four-Refactoring', 'Car-OO-Project', 'Memory-Game', 'Predictive-Text-Project', 'TODO-App', 'Fruit_Search', 'Memory_Game', 'GIF_Searcher', 'Jeopardy', 'AP_Macro_Graphing_Tool', 'Hacker_Or_Snooze', 'AP_Macro_Graphing_Tool', 'MacroeconMastery'], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        },
+      },
+      manual: {
+        // Properties for manually specifying projects
+        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+      },
     },
+    external: {
+      header: 'My Projects',
+      // To hide the `External Projects` section, keep it empty.
+      projects: [
+        {
+          title: 'MacroeconMastery',
+      description:
+      "Technologies: BigQuery, Node.js, Python, Flask, AWS, JavaScript, HTML and CSS. MacroeconMastery redefines AP Macroeconomics preparation with a cutting-edge full-stack application that stands out as the sole provider of immersive free-response practice. Our platform utilizes advanced natural language understanding powered by Dialogflow API, enabling seamless interaction through our intuitive chatbot interface. Our database is powered by BigQuery, a Google Cloud Service. We also sell products for students and teachers by linking our page to the Stripe API. The application is hosted at a AWS Elastic Beanstalk server and a CI/CD AWS CodePipeline connected with GitHub.",
+      imageUrl: 'https://i.ibb.co/SvbbF6d/Screenshot-2024-02-22-at-10-43-11-AM.png',
+      link: 'https://macroeconmastery.com/',
+        },
+        {
+          title: 'Nutjobs',
+      description:
+      "Technologies: React, Node.js, Express, PostgreSQL, JavaScript, JWT, JSON Schemas, OOP, Google Cloud Service, RESTful API, Bootstrap, Spline and Jest. Nutjobs is a full-stack job search platform offering intuitive filtering by title and salary. Secured with JSON Web Tokens (JWT) and JSON schemas for data integrity, Nutjobs ensures user privacy. Built with OOP principles for seamless CRUD operations, it's rigorously tested with Jest. The backend, a RESTful API on Express.js, connects to PostgreSQL on an Google Cloud Enterprise database for scalability. Frontend, powered by React. Nutjobs makes fun of the job hunting process, delivering a streamlined experience with advanced technology.",
+      imageUrl: 'https://www.stockvault.net/data/2018/07/15/253106/preview16.jpg',
+      link: 'https://nutjobs.onrender.com/',
+        },
+        {
+          title: 'Hack or Snooze',
+      description:
+        'Technologies: JavaScript ES6, AJAX (axios), HTML5, CSS3. In this forum-like application inspired by the HackerNews website, users are encouraged to share technology articles that they find interesting. Users have the ability to create a personalized account by setting up a username and can log in or log out as needed. They can also add or remove stories from the forum feed, giving them control over the content they see. Additionally, users can manage their favorite stories by adding or deleting them. There`s also a dedicated section where users can easily view all the stories they have created. The project is built with JavaScript ES6 and incorporates AJAX requests to the Hacker News API via axios. It features responsive design and follows a separation of concerns architecture.',
+      imageUrl: 'https://i.ytimg.com/vi/S-ulm49hvmk/maxresdefault.jpg',
+      link: 'https://andrephilot.github.io/Hacker_Or_Snooze/',
+        },
+        {
+          title: 'Jeopardy! Game',
+      description:
+        'Technologies: JavaScript, jQuery, AJAX, CSS and HTML to create a dynamic Jeopardy game. Implemented a 6x5 game board with randomly selected categories and questions from the jService API. Enabled users to reveal questions and answers with click interactions, replicating the Jeopardy TV show format and design. Integrated a ”Restart” button to fetch new categories and questions, enhancing replayability. Dynamically updated the game board with question texts, providing an interactive and engaging user experience. Demonstrated proficiency in handling asynchronous requests with AJAX for seamless data retrieval from the jService API.',
+      imageUrl: 'https://media0.giphy.com/media/1vZaAcldbX8Xh6lMlV/giphy.gif',
+      link: 'https://andrephilot.github.io/Jeopardy/',
+    },
+      ],
+    },
+  },
+  seo: {
+    title: 'Portfolio of Andre Philot',
+    description: '',
+    imageURL: '',
   },
   social: {
     linkedin: 'andre-philot',
-    twitter: '',
+    x: '',
     mastodon: '',
+    researchGate: '',
     facebook: '',
     instagram: '',
+    reddit: '',
+    threads: '',
     youtube: '', // example: 'pewdiepie'
+    udemy: '',
     dribbble: '',
     behance: '',
     medium: '',
@@ -55,7 +117,7 @@ const config = {
     'REST',
     'Gunicorn',
     'Spline',
-    'Bootstrap'
+    'Bootstrap',
   ],
   experiences: [
     {
@@ -79,15 +141,15 @@ const config = {
       to: 'Present',
     }
   ],
-  /* certifications: [
-    {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com'
-    },
-  ], */
-  education: [
+  // certifications: [
+  //   {
+  //     name: 'Lorem ipsum',
+  //     body: 'Lorem ipsum dolor sit amet',
+  //     year: 'March 2022',
+  //     link: 'https://example.com',
+  //   },
+  // ],
+  educations: [
     {
       institution: 'Springboard Bootcamp',
       degree: 'Software Engineering Certification',
@@ -107,43 +169,31 @@ const config = {
       to: '2015',
     },
   ],
-
-  // To hide the `My Projects` section, keep it empty.
-  externalProjects: [
-    {
-      title: 'MacroeconMastery',
-      description:
-      "Technologies: BigQuery, Node.js, Python, Flask, AWS, JavaScript, HTML and CSS. MacroeconMastery redefines AP Macroeconomics preparation with a cutting-edge full-stack application that stands out as the sole provider of immersive free-response practice. Our platform utilizes advanced natural language understanding powered by Dialogflow API, enabling seamless interaction through our intuitive chatbot interface. Our database is powered by BigQuery, a Google Cloud Service. We also sell products for students and teachers by linking our page to the Stripe API. The application is hosted at a AWS Elastic Beanstalk server and a CI/CD AWS CodePipeline connected with GitHub.",
-      imageUrl: 'https://i.ibb.co/SvbbF6d/Screenshot-2024-02-22-at-10-43-11-AM.png',
-      link: 'https://macroeconmastery.com/',
-    },
-    {
-      title: 'Nutjobs',
-      description:
-      "Technologies: React, Node.js, Express, PostgreSQL, JavaScript, JWT, JSON Schemas, OOP, Google Cloud Service, RESTful API, Bootstrap, Spline and Jest. Nutjobs is a full-stack job search platform offering intuitive filtering by title and salary. Secured with JSON Web Tokens (JWT) and JSON schemas for data integrity, Nutjobs ensures user privacy. Built with OOP principles for seamless CRUD operations, it's rigorously tested with Jest. The backend, a RESTful API on Express.js, connects to PostgreSQL on an Google Cloud Enterprise database for scalability. Frontend, powered by React. Nutjobs makes fun of the job hunting process, delivering a streamlined experience with advanced technology.",
-      imageUrl: 'https://www.stockvault.net/data/2018/07/15/253106/preview16.jpg',
-      link: 'https://nutjobs.onrender.com/',
-    },
-    {
-      title: 'Hack or Snooze',
-      description:
-        'Technologies: JavaScript ES6, AJAX (axios), HTML5, CSS3. In this forum-like application inspired by the HackerNews website, users are encouraged to share technology articles that they find interesting. Users have the ability to create a personalized account by setting up a username and can log in or log out as needed. They can also add or remove stories from the forum feed, giving them control over the content they see. Additionally, users can manage their favorite stories by adding or deleting them. There`s also a dedicated section where users can easily view all the stories they have created. The project is built with JavaScript ES6 and incorporates AJAX requests to the Hacker News API via axios. It features responsive design and follows a separation of concerns architecture.',
-      imageUrl: 'https://i.ytimg.com/vi/S-ulm49hvmk/maxresdefault.jpg',
-      link: 'https://andrephilot.github.io/Hacker_Or_Snooze/',
-    },
-    {
-      title: 'Jeopardy! Game',
-      description:
-        'Technologies: JavaScript, jQuery, AJAX, CSS and HTML to create a dynamic Jeopardy game. Implemented a 6x5 game board with randomly selected categories and questions from the jService API. Enabled users to reveal questions and answers with click interactions, replicating the Jeopardy TV show format and design. Integrated a ”Restart” button to fetch new categories and questions, enhancing replayability. Dynamically updated the game board with question texts, providing an interactive and engaging user experience. Demonstrated proficiency in handling asynchronous requests with AJAX for seamless data retrieval from the jService API.',
-      imageUrl: 'https://media0.giphy.com/media/1vZaAcldbX8Xh6lMlV/giphy.gif',
-      link: 'https://andrephilot.github.io/Jeopardy/',
-    },
+  // publications: [
+  //   {
+  //     title: 'Publication Title',
+  //     conferenceName: '',
+  //     journalName: 'Journal Name',
+  //     authors: 'John Doe, Jane Smith',
+  //     link: 'https://example.com',
+  //     description:
+  //       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  //   },
+  //   {
+  //     title: 'Publication Title',
+  //     conferenceName: 'Conference Name',
+  //     journalName: '',
+  //     authors: 'John Doe, Jane Smith',
+  //     link: 'https://example.com',
+  //     description:
+  //       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  //   },
   ],
-  // Display blog posts from your medium or dev account. (Optional)
-  blog: {
-    // source: 'dev', // medium | dev
-    // username: 'arifszn', // to hide blog section, keep it empty
-    // limit: 2, // How many posts to display. Max is 10.
+  // Display articles from your medium or dev account. (Optional)
+  // blog: {
+  //   source: 'dev', // medium | dev
+  //   username: 'arifszn', // to hide blog section, keep it empty
+  //   limit: 2, // How many articles to display. Max is 10.
   },
   googleAnalytics: {
     id: 'G-GREBQHGJZF', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -164,8 +214,8 @@ const config = {
     // using user system preferences, instead of the hardcoded defaultTheme
     respectPrefersColorScheme: false,
 
-    // Hide the ring in Profile picture
-    hideAvatarRing: false,
+    // Display the ring in Profile picture
+    displayAvatarRing: true,
 
     // Available themes. To remove any theme, exclude from here.
     themes: [
@@ -198,10 +248,13 @@ const config = {
       'night',
       'coffee',
       'winter',
+      'dim',
+      'nord',
+      'sunset',
       'procyon',
     ],
 
-    // Custom theme
+    // Custom theme, applied to `procyon` theme
     customTheme: {
       primary: '#df3225',
       secondary: '#df3225',
@@ -219,6 +272,8 @@ const config = {
       target="_blank"
       rel="noreferrer"
     >GitProfile</a> and ❤️`,
+
+  enablePWA: true,
 };
 
-export default config;
+export default CONFIG;
